@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Text Comparison Tool",
+    "version": "1.0",
+    "description": "Compare rows from a file with text on a webpage.",
+    "permissions": ["scripting", "activeTab"],
+    "host_permissions": ["<all_urls>"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.png"
+    },
+    "background": {
+      "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+  {
+    "resources": ["dataset.tsv"],
+    "matches": ["<all_urls>"]
+  }
+]
+
+  }
+  
